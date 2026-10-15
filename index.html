@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditya is a very cool boy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              500: '#3b82f6',
+              600: '#2563eb',
+              900: '#0a0f1d'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .gradient-glow {
+      background: radial-gradient(circle at 50% 20%, rgba(99, 102, 241, 0.15), rgba(168, 85, 247, 0.05) 50%, transparent 70%);
+    }
+    .text-glow {
+      text-shadow: 0 0 30px rgba(129, 140, 248, 0.35);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(147, 197, 253, 0.3);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#07090e] text-slate-100 font-sans selection:bg-indigo-500 selection:text-white relative overflow-x-hidden">
+  <div class="fixed inset-0 gradient-glow pointer-events-none"></div>
+
+  <!-- Decorative blur blobs -->
+  <div class="fixed -top-40 -left-40 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="fixed top-1/2 -right-40 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <main class="relative z-10 max-w-5xl mx-auto px-6 py-20 flex flex-col items-center min-h-screen justify-center text-center">
+    <!-- Badge -->
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-xs font-semibold tracking-wide uppercase text-indigo-300 mb-8 shadow-sm">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      Official Certified Fact
+    </div>
+
+    <!-- Main Title -->
+    <h1 class="font-display text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight mb-6 text-glow leading-tight">
+      Aditya is a <br />
+      <span class="bg-gradient-to-r from-cyan-400 via-indigo-300 to-fuchsia-400 bg-clip-text text-transparent">
+        very cool boy
+      </span>
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="max-w-2xl text-slate-400 text-lg sm:text-xl font-light mb-12 leading-relaxed">
+      Crafting ideas into reality, breaking barriers, and setting standards. Designed with high-fidelity aesthetics, precision, and pure style.
+    </p>
+
+    <!-- Highlights Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl mb-14 text-left">
+      <div class="glass-card rounded-2xl p-6 transition-all duration-300">
+        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-2xl mb-4 border border-cyan-500/20">
+          ⚡
+        </div>
+        <h3 class="font-display font-semibold text-lg text-slate-100 mb-1">Effortless Charm</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">Radiating high positive energy and keeping it smoothly effortless 24/7.</p>
+      </div>
+
+      <div class="glass-card rounded-2xl p-6 transition-all duration-300">
+        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-2xl mb-4 border border-indigo-500/20">
+          🚀
+        </div>
+        <h3 class="font-display font-semibold text-lg text-slate-100 mb-1">Visionary Drive</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">Always building the next big thing with top-tier focus and modern taste.</p>
+      </div>
+
+      <div class="glass-card rounded-2xl p-6 transition-all duration-300">
+        <div class="w-12 h-12 rounded-xl bg-fuchsia-500/10 flex items-center justify-center text-2xl mb-4 border border-fuchsia-500/20">
+          ✨
+        </div>
+        <h3 class="font-display font-semibold text-lg text-slate-100 mb-1">Unmatched Aura</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">Scientifically verified 100% cool factor with zero disputes found.</p>
+      </div>
+    </div>
+
+    <!-- Interactive CTA / Footnote -->
+    <div class="flex flex-col sm:flex-row items-center gap-4">
+      <div class="px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold text-sm shadow-lg shadow-indigo-500/25 cursor-default">
+        Verified Coolness: 100%
+      </div>
+      <a href="https://github.com/adityapokuri229/weave-test" target="_blank" class="px-6 py-3 rounded-xl glass-card text-slate-300 hover:text-white font-medium text-sm transition-all duration-200">
+        View on GitHub →
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-20 text-xs text-slate-500 font-mono tracking-wider">
+      STITCH-INSPIRED HIGH-FIDELITY DESIGN &bull; BUILT FOR ADITYA
+    </footer>
+  </main>
+</body>
+</html>
